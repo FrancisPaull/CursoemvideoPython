@@ -1,0 +1,1 @@
+#Um professor quer sortear um dos quatro alunos para apagar o quadro. Faça um pg que ajude ele lendo os nomes deles e escrevendo
