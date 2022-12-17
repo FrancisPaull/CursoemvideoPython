@@ -3,3 +3,6 @@
 n1 = int(input('Digite um número: '))
 dobro = n1 * 2
 print('O dobro de {} é igual a {}'.format(n1, dobro))
+
+
+
