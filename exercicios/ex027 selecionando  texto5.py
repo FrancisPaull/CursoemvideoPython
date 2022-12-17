@@ -5,4 +5,4 @@ Faça um pg que leia o nome completo de uma pessoa e mostre o primeiro e o últi
 nome = str(input('Digite seu nome completo')).strip()
 nome = nome.split()
 print('Seu primeiro nome é {}'.format(nome[0]))
-nome = nome.
+print('Seu último nome é {}'.format(nome[len(nome)-1]))
