@@ -1,0 +1,1 @@
+'''A Estrutura de repetiç]ão While também é conhecida como Estrutura de repetição de teste lógico'''
