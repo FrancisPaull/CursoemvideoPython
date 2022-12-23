@@ -4,7 +4,10 @@
 primeiro = int(input('10 primeiros termos de uma PA,'
               'Digite um número: '))
 razao = int(input('Digite a razão da PA: '))
-decimo = primeiro + (10 - 1) * razao
-for c in range(primeiro, decimo + razao, razao):
-    print('{}'.format(c), end=' -> ')
+cont = 0
+termo = primeiro
+while cont != 10:
+    print('{}'.format(termo), end='->')
+    cont += 1
+    termo += razao
 print('Fim')
