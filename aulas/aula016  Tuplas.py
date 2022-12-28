@@ -42,7 +42,7 @@ for cont in range(0, len(lanche)):
 for posicao, comida in enumerate(lanche):
     print(f'eu vou comer {comida} na posição {posicao}')
 
-print(sorted(lanche)) #Organiza a tupla transformando a em uma lista
+print(sorted(lanche)) #Organiza a tupla transformando a em uma lista - Colocar en ordem
 
 a = 2, 4, 6, 8
 b = 9, 7, 5, 3
@@ -54,6 +54,8 @@ print(d)
 
 del(teste) #Apesar de imutável a tupla pode ser deletada.
 print(teste)
+
+print(sorted(d)) #Colocar em ordem
 
 print(d.count(3)) #Para mostrar quantas vezes o elemento dentro do parenteses aparece na tupla.
 
