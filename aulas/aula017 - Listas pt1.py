@@ -42,9 +42,10 @@ valores = list()
 valores.append(2)
 valores.append(5)
 valores.append(7)
-for c, v in enumerate(valores):    # E numerate expões tanto a posição quanto o elemento ( a chave e o valor )
+for c, v in enumerate(valores):    # E numerate expõe tanto a posição quanto o elemento (a chave e o valor)
     print(f'Na posição {c} está o número {v}.')
 print('Fim da lista.')
+
 for cont in range(0, 3):
     valores.append(int(input('Digite um valor: ')))
 

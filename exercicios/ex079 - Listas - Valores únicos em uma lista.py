@@ -5,9 +5,16 @@ digitados em ordem crescente.
 _________________ _________________ _________________ _________________ _________________"""
 
 lista = list()
-mais = 'Ss'
 
 while True:
-    
-
+    n = int(input('Digite um número:'))
+    if n not in lista:
+        lista.append(n)
+        print('Número Adicionado')
+    else:
+        print('Número não adicionado.')
+    mais = str(input('Gostaria de adicionar mais números? [S/N]'))
+    if mais in 'Nn':
+        break
+print(sorted(lista))
 
