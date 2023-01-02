@@ -64,7 +64,7 @@ print()
 print()
 for e in brasil1:
     print(e)
-    for key, value in estados.items():
+    for key, value in e.items():
         print(f'A chave é {key} e o valor é {value}.')
 print(estados.items())
 
