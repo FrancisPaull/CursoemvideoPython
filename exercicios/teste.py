@@ -1,9 +1,17 @@
-estado = dict()
-brasil = list()
-for c in range(0,3):
-    estado['Uf'] = str(input('Estado: '))
-    estado['Sigla'] = str(input('Siglas: '))
-    brasil.append(estado.copy())
-for e in brasil:
-    for k, v in e.items():
-        print(f'{v} -- {k}')
+cadstro = {}
+lista = []
+while True:
+    cadstro['nome'] = input('Nome')
+    while True:
+        cadstro['sexo'] = input('sexo').upper()[0]
+        if cadstro['sexo'] in 'MF':
+            break
+        print('Erro')
+    cadstro['idade'] = int(input('Idade:'))
+    lista.append(cadstro.copy())
+    while True:
+        resp = str(input('Continuar ? '))
+        if resp in 'SN':
+            break
+    if resp == 'N':
+        break
