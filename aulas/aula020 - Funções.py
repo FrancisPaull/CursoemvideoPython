@@ -29,3 +29,26 @@ naquela função.
 
 
 """    # Explicação
+
+
+def fatorial(num=1):
+    f = 1
+    for c in range(num, 0, -1):
+        f *= c
+    return f
+
+
+def par(num=1):
+    if num % 2 == 0:
+        return True
+
+
+n = int(input('Digite um número'))
+print(f'O fatorial de {n} é igual a {fatorial(n)}')
+
+while True:
+    nu = int(input('Digite um número para saber se é par ou ímpar.'))
+    if par(nu):
+        print(f'{nu} é par.')
+    else:
+        print(f'{nu} é impar.')
