@@ -5,12 +5,19 @@ __________________________ __________________________ __________________________
 
 
 def leiaint(txt, num=0):
-        global n
+    ok = False
+    valor = int()
+    while True:
+        n = input(txt)
+        if n.isnumeric():
+            ok = True
+            valor = n
+        else:
+            print('\033[0;31mErro!!!\033[mCaracteres inválidos, por favor digite \033[0;33m NÚMEROS INTEIROS.\033[m')
+        if ok:
+            break
+    return valor
 
-        while True:
-            return input(txt)
 
-
-
-n = leiaint('Digite: ')
+n = leiaint('Digite um número: ')
 print(f'Você digitou o número {n} ')
