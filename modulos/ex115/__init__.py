@@ -1,0 +1,2 @@
+def pulalinha():
+    print('\n')

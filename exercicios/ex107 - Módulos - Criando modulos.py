@@ -5,7 +5,7 @@ ________________ ________________ ________________ ________________ ____________
 from modulos import moedas
 
 n = int(input('Digite um valor: '))
-print(f'{moedas.aumentar(n,13,form=True)}')
+print(f'{moedas.aumentar(n, 13, form=True)}')
 print(f'{moedas.diminuir(n, 20, form=True)}')
 print(f'{moedas.dobro(n)}')
 print(f'{moedas.metade(n)}')
