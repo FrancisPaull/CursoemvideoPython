@@ -13,7 +13,7 @@ def arquivoExiste(nome):
 
 def criarArquivo(nome):
     try:
-        a = open(nome,'wt')
+        a = open(nome,'wt+')
         a = a.close()
     except:
         print('Erro ao criar arquivo.')
@@ -21,17 +21,31 @@ def criarArquivo(nome):
         print(f'O arquivo {nome}, criado com sucesso!')
 
 
-def adicionarcadastro(arq,nome, idade):
+def adicionarcadastro(arq,nome='desconhecido', idade=0):
     try:
-        a = open(arq, 'a', encoding='UTF-8')
-        a.write(nome)
-        a.write(idade)
-        a = a.close()
+        arquivo = open(arq, 'a', encoding='UTF-8')
+    except FileNotFoundError:
+        print('Erro ao abrir o arquivo:')
+    try:
+        arquivo.write(f'{nome};{idade}\n')
+    except:
+        print('Erro ao adicionar cadastro.')
+    else:
+        print(f'{cor["verde"]}Novo registro adicionado.{cor["limpa"]}')
+        arquivo.close
 
-    except ValueError:
-        print('Valor inválido')
 
 
-def vercadastro(nome):
-    with open(nome, 'r') as arquivo:
-        print(arquivo.read())
+def vercadastro(arq):
+    try:
+        a = open(arq, 'rt')
+    except:
+        print('Erro ao ler o arquivo')
+    else:
+       for linhaa in a:
+            dado = linhaa.split(';')
+            dado[1] = dado[1].replace('\n','')
+            print(f'{dado[0]:<30}{dado[1]:>3} anos')
+    finally:
+        a.close()
+
