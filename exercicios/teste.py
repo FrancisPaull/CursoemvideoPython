@@ -1,22 +1,55 @@
-def not_string(frase):
-  if frase[0:2] == 'not':
-     return True
-  else:
-      frase = "not " + frase
-      return frase
+"""
+Faça uma lista de comprar com listas
+O usuário deve ter a possibilidade de
+inserir, apagar e listar valores da sua lista
+Não permita que o programa quebre com 
+erros de índices inexistentes na lista.
+"""
+
+lista_compras = ['Arroz', 'Feijão', 'Macarrão']
+lista = []
+
+while True:
+    try:
+        opcao = input('Selecione uma opção. [i]nserir [a]pagar ou [l]istar:  ')
+        if len(opcao) > 1:
+            print("Entrada inválida, digite apenas uma letra .")
+            continue
+
+        if opcao == 'i':
+            while True:
+                produto = input('Nome do produto: ')
+                if produto == '':
+                    print('Nada digitado. Por favor, digite o nome do produto.')
+                else:
+                    break
+            lista.append(produto)
+            lista_compras += lista[:]
+            print(lista_compras)
+
+        lista.clear()
+
+        if opcao == 'a':
+            while True:
+                apagar_indice = int(input("Digite qual indice apagar: "))
+                if apagar_indice > len(lista_compras):
+                    print('indice inválido:')
+                if len(lista_compras) == 0:
+                    print('Não há produtos registrados.')
+                else:
+                    break
+            lista_compras.pop(apagar_indice)
+            print(lista_compras)
 
 
 
-print(not_string('not quql'))
 
-print(not_string('x'))
+        if opcao == 'l':
+            for indice, produto in enumerate(lista_compras):
+                print(f'Produto.{indice} - {produto}.')
 
-print(not_string('not é ruim'))
+        if opcao not in 'ial':
+            print('Opção inválida, tente novamente.')
 
-print(not_string('ruim'))
-
-print(not_string('not'))
-
-print(not_string('not é'))
-
-print(not_string('not'))
+    except:
+        ...
